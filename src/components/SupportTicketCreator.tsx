@@ -164,11 +164,11 @@ export default function SupportTicketCreator() {
       {currentView === 'home' && (
         <div className="space-y-6" id="main-container">
           {/* Explanation Alert */}
-          <div className="bg-[#2c2c2e] text-white p-5 rounded-xl border border-slate-700 shadow-sm flex items-start gap-3.5">
-            <div className="p-2 bg-white/10 rounded-lg shrink-0 text-[#94C11F]">
+          <div className="bg-white text-[#092848] p-5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+            <div className="p-2 bg-slate-100 rounded-lg shrink-0 text-[#092848]">
               <Info className="h-5 w-5" />
             </div>
-            <p className="text-xs sm:text-sm leading-relaxed text-slate-100">
+            <p className="text-xs sm:text-sm leading-relaxed text-[#092848] font-sans font-medium">
               Les tickets de support servent à résoudre des problèmes rencontrés au{' '}
               <strong>niveau informatique</strong>.<br />
               Si votre demande concerne un autre sujet, prenez contact avec votre responsable.
@@ -180,10 +180,12 @@ export default function SupportTicketCreator() {
             <button
               id="trigger-show-odicee"
               onClick={() => handleNavigate('odicee')}
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all duration-150 p-8 rounded-xl border border-slate-700 shadow-sm text-center flex flex-col items-center justify-center gap-4 min-h-[160px] group select-none active:scale-95"
+              className="bg-white hover:bg-slate-50 transition-all duration-150 p-8 rounded-xl border border-slate-200 shadow-sm text-center flex flex-col items-center justify-center gap-4 min-h-[160px] group select-none active:scale-95"
             >
-              <HelpCircle className="h-8 w-8 text-[#94C11F] group-hover:scale-110 transition-transform" />
-              <h2 className="text-base sm:text-lg font-bold text-white leading-snug">
+              <div className="p-3 bg-slate-50 rounded-full text-[#092848] group-hover:scale-110 transition-transform">
+                <HelpCircle className="h-8 w-8" />
+              </div>
+              <h2 className="text-base sm:text-lg font-bold text-[#092848] leading-snug">
                 Ma demande concerne OdiCEE
               </h2>
             </button>
@@ -193,10 +195,12 @@ export default function SupportTicketCreator() {
               href="https://edeis.simplydesk.com/IncidentManagement/Ticket/Create"
               target="_blank"
               rel="noreferrer"
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all duration-150 p-8 rounded-xl border border-slate-700 shadow-sm text-center flex flex-col items-center justify-center gap-4 min-h-[160px] group select-none active:scale-95"
+              className="bg-white hover:bg-slate-50 transition-all duration-150 p-8 rounded-xl border border-slate-200 shadow-sm text-center flex flex-col items-center justify-center gap-4 min-h-[160px] group select-none active:scale-95"
             >
-              <ArrowRight className="h-8 w-8 text-slate-300 group-hover:translate-x-1.5 transition-transform" />
-              <h2 className="text-base sm:text-lg font-bold text-white leading-snug">
+              <div className="p-3 bg-slate-50 rounded-full text-[#092848] group-hover:translate-x-1 transition-transform">
+                <ArrowRight className="h-8 w-8" />
+              </div>
+              <h2 className="text-base sm:text-lg font-bold text-[#092848] leading-snug">
                 Ma demande concerne autre chose
               </h2>
             </a>
@@ -216,11 +220,11 @@ export default function SupportTicketCreator() {
       {currentView === 'odicee' && (
         <div className="space-y-6 animate-fade-in" id="odicee-container">
           {/* Detailed explanation alert */}
-          <div className="bg-[#2c2c2e] text-white p-5 rounded-xl border border-slate-700 shadow-sm flex items-start gap-3.5">
-            <div className="p-2 bg-white/10 rounded-lg shrink-0 text-[#94C11F]">
+          <div className="bg-white text-[#092848] p-5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+            <div className="p-2 bg-slate-100 rounded-lg shrink-0 text-[#092848]">
               <Info className="h-5 w-5" />
             </div>
-            <p className="text-xs sm:text-sm leading-relaxed text-slate-100">
+            <p className="text-xs sm:text-sm leading-relaxed text-[#092848] font-sans font-medium">
               Les catégories présentées ne concernent que les incidents liés à OdiCEE Gestion ou OdiCEE Mobile.<br />
               Pour tout autre incident, cliquer “Ma demande concerne autre chose” sur la page précédente.
             </p>
@@ -231,12 +235,12 @@ export default function SupportTicketCreator() {
             <button
               id="cat-odicee-gp-generic-incident"
               onClick={() => handleNavigate('detail', 'odiceeGpGenericIncident')}
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-700 active:scale-[0.98] group"
+              className="bg-white hover:bg-slate-50 transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-200 shadow-sm active:scale-[0.98] group"
             >
-              <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#94C11F] transition-colors">
+              <h3 className="text-sm font-bold text-[#092848] leading-snug group-hover:text-[#94C11F] transition-colors">
                 Vous rencontrez un problème sur OdiCEE Gestion et/ou Partenaires ?
               </h3>
-              <p className="text-xs italic text-slate-300 font-sans mt-3 leading-relaxed">
+              <p className="text-xs italic text-slate-500 font-sans mt-3 leading-relaxed">
                 Exemple d'incident : export impossible, message d'erreur...
               </p>
             </button>
@@ -245,12 +249,12 @@ export default function SupportTicketCreator() {
             <button
               id="cat-odicee-gp-file-incident"
               onClick={() => handleNavigate('detail', 'odiceeGpFileIncident')}
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-700 active:scale-[0.98] group"
+              className="bg-white hover:bg-slate-50 transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-200 shadow-sm active:scale-[0.98] group"
             >
-              <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#94C11F] transition-colors">
+              <h3 className="text-sm font-bold text-[#092848] leading-snug group-hover:text-[#94C11F] transition-colors">
                 Vous rencontrez un problème sur un dossier ?
               </h3>
-              <p className="text-xs italic text-slate-300 font-sans mt-3 leading-relaxed">
+              <p className="text-xs italic text-slate-500 font-sans mt-3 leading-relaxed">
                 Exemple d'incident : Mauvais calcul de prime, demande exceptionnelle sur un dossier...
               </p>
             </button>
@@ -259,12 +263,12 @@ export default function SupportTicketCreator() {
             <button
               id="cat-odicee-mobile-incident"
               onClick={() => handleNavigate('detail', 'odiceeMobileIncident')}
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-700 active:scale-[0.98] group"
+              className="bg-white hover:bg-slate-50 transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-200 shadow-sm active:scale-[0.98] group"
             >
-              <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#94C11F] transition-colors">
+              <h3 className="text-sm font-bold text-[#092848] leading-snug group-hover:text-[#94C11F] transition-colors">
                 Vous rencontrez un problème sur OdiCEE Mobile ?
               </h3>
-              <p className="text-xs italic text-slate-300 font-sans mt-3 leading-relaxed">
+              <p className="text-xs italic text-slate-500 font-sans mt-3 leading-relaxed">
                 Exemple d’incident : prise de photo impossible, dossier de preuves qui ne remonte pas...
               </p>
             </button>
@@ -273,12 +277,12 @@ export default function SupportTicketCreator() {
             <button
               id="cat-evolution"
               onClick={() => handleNavigate('detail', 'evolution')}
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-700 active:scale-[0.98] group"
+              className="bg-white hover:bg-slate-50 transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-200 shadow-sm active:scale-[0.98] group"
             >
-              <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#94C11F] transition-colors">
+              <h3 className="text-sm font-bold text-[#092848] leading-snug group-hover:text-[#94C11F] transition-colors">
                 Demande d'évolution
               </h3>
-              <p className="text-xs italic text-slate-300 font-sans mt-3 leading-relaxed">
+              <p className="text-xs italic text-slate-500 font-sans mt-3 leading-relaxed">
                 Vous rencontrez un problème qu’OdiCEE ne sait pas résoudre ?
               </p>
             </button>
@@ -287,12 +291,12 @@ export default function SupportTicketCreator() {
             <button
               id="cat-regulatory-param"
               onClick={() => handleNavigate('detail', 'regulatoryParam')}
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-700 active:scale-[0.98] group"
+              className="bg-white hover:bg-slate-50 transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-200 shadow-sm active:scale-[0.98] group"
             >
-              <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#94C11F] transition-colors">
+              <h3 className="text-sm font-bold text-[#092848] leading-snug group-hover:text-[#94C11F] transition-colors">
                 Changements réglementaires / Demandes de paramétrage
               </h3>
-              <p className="text-xs italic text-slate-300 font-sans mt-3 leading-relaxed">
+              <p className="text-xs italic text-slate-500 font-sans mt-3 leading-relaxed">
                 Mise à jour des fiches réglementaires / Demande de modification de paramétrage d'OdiCEE
               </p>
             </button>
@@ -301,12 +305,12 @@ export default function SupportTicketCreator() {
             <button
               id="cat-new-operation"
               onClick={() => handleNavigate('detail', 'newOperation')}
-              className="bg-[#2c2c2e] hover:bg-[#343437] transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-700 active:scale-[0.98] group"
+              className="bg-white hover:bg-slate-50 transition-all p-5 rounded-xl text-left flex flex-col justify-between min-h-[168px] border border-slate-200 shadow-sm active:scale-[0.98] group"
             >
-              <h3 className="text-sm font-bold text-white leading-snug group-hover:text-[#94C11F] transition-colors">
+              <h3 className="text-sm font-bold text-[#092848] leading-snug group-hover:text-[#94C11F] transition-colors">
                 Création d'opération
               </h3>
-              <p className="text-xs italic text-slate-300 font-sans mt-3 leading-relaxed">
+              <p className="text-xs italic text-slate-500 font-sans mt-3 leading-relaxed">
                 Les demandes sont faites exclusivement par le SQAN
               </p>
             </button>
@@ -318,19 +322,19 @@ export default function SupportTicketCreator() {
       {currentView === 'detail' && selectedSubcat && (
         <div className="space-y-6 animate-fade-in" id="specific-sub-cat-container">
           
-          {/* Header block themed dark style */}
-          <div className="bg-[#2c2c2e] p-5 sm:p-6 rounded-xl border border-slate-700 shadow-sm select-none">
-            <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
+          {/* Header block themed class */}
+          <div className="bg-white p-5 sm:p-6 rounded-xl border border-slate-200 shadow-sm select-none">
+            <h2 className="text-base sm:text-lg font-bold text-[#092848] tracking-tight font-sans">
               {SUBCATS[selectedSubcat].title}
             </h2>
           </div>
 
           {/* Core Content Container */}
-          <div className="bg-[#2c2c2e] text-white p-6 rounded-xl border border-slate-700 shadow-sm space-y-6 text-left">
+          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-6 text-left">
             
             {/* Warning warning box */}
             <div className="bg-[#fff3cd] border-l-4 border-[#ffc107] p-4.5 rounded-r-lg shadow-sm flex items-start gap-3.5 text-left">
-              <AlertTriangle className="h-5 w-5 text-[#ff9800] shrink-0 mt-0.5" />
+              <AlertTriangle className="h-5 w-5 text-[#ff9800] shrink-0 mt-0.5 animate-bounce" />
               <p className="text-xs text-[#856404] leading-relaxed font-sans font-medium">
                 {SUBCATS[selectedSubcat].warningText}
               </p>
@@ -338,9 +342,9 @@ export default function SupportTicketCreator() {
 
             {/* Optional Embedded Iframe Guide */}
             {SUBCATS[selectedSubcat].iframeUrl && (
-              <div className="flex justify-center w-full bg-slate-800/40 p-4 rounded-xl border border-slate-700 overflow-hidden">
+              <div className="flex justify-center w-full bg-slate-50 p-4 rounded-xl border border-slate-200 overflow-hidden">
                 <iframe
-                  className="w-full max-w-4xl bg-black rounded-lg aspect-[4/3] sm:aspect-[16/10] md:h-[650px] border-0"
+                  className="w-full max-w-4xl bg-[#092848]/5 rounded-lg aspect-[4/3] sm:aspect-[16/10] md:h-[650px] border border-slate-200"
                   src={SUBCATS[selectedSubcat].iframeUrl}
                   title="Création de ticket dans simplyDesk"
                   referrerPolicy="unsafe-url"
@@ -353,10 +357,10 @@ export default function SupportTicketCreator() {
 
             {/* List of Examples and Instructions */}
             <div className="space-y-3 pt-2">
-              <p className="text-xs sm:text-sm font-bold text-[#94C11F] uppercase tracking-wider">
+              <p className="text-xs sm:text-sm font-bold text-[#092848] uppercase tracking-wider font-sans">
                 {SUBCATS[selectedSubcat].examplesTitle}
               </p>
-              <ul className="list-disc pl-5 text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+              <ul className="list-disc pl-5 text-xs sm:text-sm text-slate-600 space-y-2 leading-relaxed">
                 {SUBCATS[selectedSubcat].examples.map((ex, idx) => (
                   <li key={idx}>{ex}</li>
                 ))}
@@ -373,7 +377,7 @@ export default function SupportTicketCreator() {
               rel="noreferrer"
               className="block w-full text-center"
             >
-              <button className="w-full py-4 px-6 font-sans font-extrabold text-xs sm:text-sm md:text-base cursor-pointer hover:bg-opacity-90 active:scale-[0.99] transition-all bg-[#94C11F] text-[#2c2c2e] rounded-xl shadow-md flex items-center justify-center gap-2 select-none border-0 outline-none">
+              <button className="w-full py-4 px-6 font-sans font-extrabold text-xs sm:text-sm md:text-base cursor-pointer bg-[#94C11F] text-[#092848] hover:opacity-90 active:scale-[0.99] transition-all rounded-xl shadow-md flex items-center justify-center gap-2 select-none border-0 outline-none">
                 {SUBCATS[selectedSubcat].buttonText}
                 <ExternalLink className="h-4.5 w-4.5" />
               </button>

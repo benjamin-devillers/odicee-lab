@@ -174,10 +174,10 @@ export default function App() {
             </div>
             <div className="text-left">
               <h1 className="text-lg font-bold tracking-wider leading-none text-white">
-                Odi<span className="text-[#94C11F]">CEE</span> Lab
+                OdiCEE <span className="text-[#94C11F]">Lab</span>
               </h1>
-              <span className="text-[10px] text-slate-400 block font-mono font-bold tracking-wider mt-0.5">
-                ADEENA EXPERIMENTAL
+              <span className="text-[10px] text-slate-400 block font-sans font-bold tracking-wider mt-0.5 animate-pulse" style={{ animationDuration: '4s' }}>
+                Espace d'expérimentation
               </span>
             </div>
           </div>
