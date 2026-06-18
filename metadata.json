@@ -1,0 +1,6 @@
+{
+  "name": "OdiCEE Lab",
+  "description": "Plateforme d'expérimentation et d'outils d'Adeena : Recherche cadastrale, informations société et RGE, vérification d'entreprises, environnements de recette et support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
